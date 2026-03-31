@@ -56,3 +56,26 @@ html, body {
   padding: 0 !important;
   overflow: hidden !important;
 }
+/* mobile zoom fix */
+.graph-view-container,
+.graph-view-placeholder,
+#graph-canvas {
+  touch-action: pinch-zoom !important;
+}
+
+html, body {
+  touch-action: manipulation !important;
+}
+
+@media (max-width: 900px) {
+  html, body {
+    overflow: auto !important;
+  }
+
+  #graph-canvas,
+  .graph-view-container,
+  .graph-view-placeholder {
+    min-height: 100vh !important;
+  }
+}
+
